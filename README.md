@@ -1,1 +1,1 @@
-A full clean dockerized django project with a postgres db to be builded from zero.
+A ecommerce app build with django
