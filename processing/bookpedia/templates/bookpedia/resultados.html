@@ -10,10 +10,7 @@
     <ul>
       {% for livro in livros_list %}
       <li>
-        <a href="{% url 'bookpedia:resumo' livro.id %}"
-          >{{ livro.nome }} -- {{ livro.paginas }} página{{
-          livro.paginas|pluralize }}</a
-        >
+        <a href="{% url 'bookpedia:resumo' livro.id %}">{{ livro.nome }} -- {{ livro.paginas }} página{{ livro.paginas|pluralize }}</a>
       </li>
       {% endfor %}
     </ul>
