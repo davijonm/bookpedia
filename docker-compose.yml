@@ -11,6 +11,9 @@ services:
       - db
     env_file:
       - .env
+    volumes:
+    - ./processing:/mnt/code
+
   db:
     image: postgres:latest
     ports:
