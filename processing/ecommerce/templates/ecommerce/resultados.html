@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Livros</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>{{ autor.nome }}</h1>
 
-<h1>{{ autor.nome }}</h1>
+    <ul>
+      {% for livro in livros_list %}
+      <li>
+        <a href="{% url 'bookpedia:resumo' livro.id %}"
+          >{{ livro.nome }} -- {{ livro.paginas }} página{{
+          livro.paginas|pluralize }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
 
-<ul>
-{% for livro in livros_list %}
-    <li>
-        <a href="{% url 'ecommerce:resumo' livro.id %}">{{ livro.nome }} -- {{ livro.paginas }} página{{ livro.paginas|pluralize }}</a>
-    </li>
-{% endfor %}
-</ul>
-
-<a href="{% url 'ecommerce:index' %}">Retornar para autores</a>
-
-</body>
+    <a href="{% url 'bookpedia:index' %}">Retornar para autores</a>
+  </body>
 </html>

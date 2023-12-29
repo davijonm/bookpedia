@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Resumo</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>Resumo de {{ livro.nome }}</h2>
 
-<h2>Resumo de {{ livro.nome }}</h2>
+    <p>{{ livro.resumo }}</p>
 
-<p>{{ livro.resumo }}</p>
-
-<a href="{% url 'ecommerce:index' %}">Retornar para autores</a>
-{% comment %} <a href="{% url 'ecommerce:resultados' %}">Retornar para livros</a> {% endcomment %}
-
-</body>
+    <a href="{% url 'bookpedia:index' %}">Retornar para autores</a>
+    {% comment %}
+    <a href="{% url 'bookpedia:resultados' %}">Retornar para livros</a> {%
+    endcomment %}
+  </body>
 </html>

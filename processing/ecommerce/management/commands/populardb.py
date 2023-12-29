@@ -1,7 +1,7 @@
 # seu_projeto/seu_app/management/commands/populardb.py
 
 from django.core.management.base import BaseCommand
-from ecommerce.models import Livro, Autor
+from bookpedia.models import Livro, Autor
 
 
 class Command(BaseCommand):

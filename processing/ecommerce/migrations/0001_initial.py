@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('nome', models.CharField(max_length=200)),
                 ('paginas', models.IntegerField(default=0)),
                 ('pub_date', models.DateTimeField(verbose_name='date published')),
-                ('autor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ecommerce.autor')),
+                ('autor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookpedia.autor')),
             ],
         ),
     ]

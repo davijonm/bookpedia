@@ -10,7 +10,7 @@
     <ul>
       {% for autor in autor_list %}
       <li>
-        <a href="{% url 'ecommerce:resultados' autor.id %}">{{ autor.nome }}</a>
+        <a href="{% url 'bookpedia:resultados' autor.id %}">{{ autor.nome }}</a>
       </li>
       {% endfor %}
     </ul>
