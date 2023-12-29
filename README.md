@@ -1,1 +1,1 @@
-A ecommerce app build with django
+A "bookpedia" app builded with django
