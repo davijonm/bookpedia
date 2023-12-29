@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Autores</title>
+  </head>
+  <body>
+    {% if autor_list %}
+    <h1>Autores</h1>
+    <ul>
+      {% for autor in autor_list %}
+      <li>
+        <a href="{% url 'ecommerce:resultados' autor.id %}">{{ autor.nome }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>Sem autores disponíveis.</p>
+    {% endif %}
+  </body>
+</html>
