@@ -6,19 +6,12 @@
 </head>
 <body>
 
-<form action="{% url 'ecommerce:resumo' livro.id %}" method="post">
-{% csrf_token %}
-<fieldset>
-    <legend><h1>{{ livro.livro_text }}</h1></legend>
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    {% for autor in livro.autor_set.all %}
-        <input type="radio" name="autor" id="autor{{ forloop.counter }}" value="{{ autor.id }}">
-        <label for="autor{{ forloop.counter }}">{{ autor.nome }}</label><br>
-    {% endfor %}
-</fieldset>
-<input type="submit" value="Resumo">
-</form>
+<h2>Resumo de {{ livro.nome }}</h2>
 
+<p>{{ livro.resumo }}</p>
+
+<a href="{% url 'ecommerce:index' %}">Retornar para autores</a>
+{% comment %} <a href="{% url 'ecommerce:resultados' %}">Retornar para livros</a> {% endcomment %}
 
 </body>
 </html>
