@@ -1,1 +1,1 @@
-A "bookpedia" app builded with django
+A "bookpedia" app builded with django and postgres
