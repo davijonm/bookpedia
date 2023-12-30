@@ -4,5 +4,6 @@ from . import views
 app_name = "api"
 
 urlpatterns = [
-    path("routes/", views.getData)
+    path("get-authors", views.get_home),
+    path("add-authors/", views.post_home)
 ]
