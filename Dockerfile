@@ -16,5 +16,5 @@ COPY api ./api
 # Copie o código-fonte do Django para o contêiner
 COPY /processing ./processing
 
-# Comando para executar o aplicativo após 5s da inicialização do container (para que espere o db estar pronto)
+# Executar o servidor na inicialização do container
 CMD ["sh", "-c", "python manage.py runserver 0.0.0.0:8000"]
