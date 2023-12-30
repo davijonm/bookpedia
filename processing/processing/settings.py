@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'bookpedia.apps.BookpediaConfig',
 
+    "bookpedia.apps.BookpediaConfig",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
