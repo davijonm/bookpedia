@@ -10,9 +10,6 @@ COPY requirements.txt .
 # Instale as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copie o código-fonte do Django RestFramework para o contêiner
-COPY api ./api
-
 # Copie o código-fonte do Django para o contêiner
 COPY processing ./processing
 
